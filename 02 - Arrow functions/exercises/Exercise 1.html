@@ -54,7 +54,7 @@
   const asOne = listArray.filter(item => item.innerText === 'Flexbox Video')
     .map(flexbox => flexbox.dataset.time)
       .map(time => { const times = time.split(':');
-        return parseFloat(parts[0] * 60) + parseFloat(parts[1])})
+        return parseFloat(times[0] * 60) + parseFloat(times[1])})
           .reduce((current, next) => current + next)
   console.log(asOne);
 </script>
