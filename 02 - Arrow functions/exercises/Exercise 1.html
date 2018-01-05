@@ -39,7 +39,8 @@
   const flexbox = listArray.filter(item => item.innerText === 'Flexbox Video')
   console.log(flexbox);
   // map down to a list of time strings
-
+  const times = flexbox.map(item => item.dataset.time)
+  console.log(times);
   // map to an array of seconds
 
   // reduce to get total
