@@ -36,13 +36,17 @@
   console.log(listItems);
   listArray = Array.from(listItems);
   // Filter for only the elements that contain the word 'flexbox'
-  const flexbox = listArray.filter(item => item.innerText === 'Flexbox Video')
+  const flexbox = listArray.filter(item => item.innerText === 'Flexbox Video');
   console.log(flexbox);
   // map down to a list of time strings
-  const times = flexbox.map(item => item.dataset.time)
+  const times = flexbox.map(item => item.dataset.time);
   console.log(times);
   // map to an array of seconds
-
+  const seconds = times.map(time => {
+    const parts = time.split(':');
+    return parseFloat(parts[0] * 60) + parseFloat(parts[1]);
+  });
+  console.log(seconds);
   // reduce to get total
 
   // 🔥 This can also be done in a single .reduce(), but we're practicing arrow functions here, so chain them!
