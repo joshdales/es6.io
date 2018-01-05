@@ -51,8 +51,11 @@
   const total = seconds.reduce((current, next) => current + next);
   console.log(total);
   // 🔥 This can also be done in a single .reduce(), but we're practicing arrow functions here, so chain them!
-  const asOne = listArray.filter(item => item.innerText === 'Flexbox Video').map(flexbox => flexbox.dataset.time).map(time => { const times = time.split(':');
-  return parseFloat(times[0] * 60) + parseFloat(times[1])}).reduce((current, next) => current + next)
+  const asOne = listArray.filter(item => item.innerText === 'Flexbox Video')
+    .map(flexbox => flexbox.dataset.time)
+      .map(time => { const times = time.split(':');
+        return parseFloat(parts[0] * 60) + parseFloat(parts[1])})
+          .reduce((current, next) => current + next)
   console.log(asOne);
 </script>
 </body>
