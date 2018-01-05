@@ -48,7 +48,8 @@
   });
   console.log(seconds);
   // reduce to get total
-
+  const total = seconds.reduce((current, next) => current + next);
+  console.log(total);
   // 🔥 This can also be done in a single .reduce(), but we're practicing arrow functions here, so chain them!
 
 </script>
